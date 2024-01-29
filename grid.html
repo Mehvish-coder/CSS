@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Practice</title>
+    <style>
+        #container{
+            display: grid;
+            gap: 10px;
+            padding: 10px;
+            background-color: rgb(226, 106, 126);
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: repeat(12, 1fr);
+            height: 100vh;
+        }
+        .item{
+            background-color: pink;
+            padding: 20px;
+            font-size: 25px;
+            text-align: start;
+        }
+        .header{
+            grid-column:1 / span 12;
+        }
+        .sidebar{
+            grid-row: 2 / span 10;
+            grid-column: 1 / span 3;
+        }
+        .nav{
+            grid-column: 4/ span 6;
+        }
+        .ad{
+            grid-row: 2 / span 10;
+            grid-column: 10 / span 3;
+        }
+        .main{
+            grid-column: 4 / span 6;
+            grid-row: 3 / span 9;
+        }
+        .foot{
+            grid-column: 1/ span 12;
+        }
+        @media (max-width: 720px) {
+            .header{
+                grid-column: 1/ span 12;
+            }
+            .nav{
+                grid-column: 1 / span 12;
+                grid-row: 2;
+            }
+            .sidebar{
+                grid-row: 3 / span 9;
+                grid-column: 1/ span 3;
+            }
+            .main{
+                grid-column: 4 / span 9;
+                grid-row: 3 / span 9;
+            }
+            .ad{
+                grid-row: 12;
+                grid-column: 1 / span 3;
+            }
+            .foot{
+                grid-row: 12;
+                grid-column: 4 / span 9;
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <h2>This is a Grid</h2>
+    <div id="container">
+        <div class="item header">header</div>
+        <div class="item sidebar">sidebar</div>
+        <div class="item nav">navigation</div>
+        <div class="item ad">ads</div>
+        <div class="item main">main</div>
+        <div class="item foot">footer</div>
+    </div>
+</body>
+</html>

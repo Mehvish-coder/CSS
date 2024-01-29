@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex box assignment</title>
+    <style>
+        #flexcont{
+            border: 2px solid rgb(45, 164, 104);
+            background-color: white;
+            border-radius: 15px;
+            height: 400px;
+            width: 400px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .item{
+            border: 2px solid black;
+            height: 100px;
+            width: 100px;
+            border-radius: 5px;
+            background-color: gray;
+            font-size: 50px;
+            text-align: center;
+        }
+    /* ------------------- */
+    /* Question 2 */
+    #secondbox{
+        height: 50px;
+        width: 900px;
+        background-color: pink;
+        border-radius: 15px;
+        border: 2px solid lightseagreen;
+        display: flex;
+        justify-content: flex-start;
+        align-content: center;
+    }
+    .innerdiv{
+        height: 50px;
+        width: 80px;
+        font-size: 24px;
+        color: black;
+        line-height: 50px;
+        margin-left: 3px;
+        border-radius: 15px;
+    }
+
+    </style>
+</head>
+<body>
+    <!-- Question 1 -->
+    <div id="flexcont">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+        <div class="item">H</div>
+        <div class="item">I</div>
+    </div>
+    <br>
+    <hr>
+    <br>
+    <!-- Question 2 recreate the flexbox-->
+    <Div id="secondbox">
+        <div class="innerdiv">logo</div>
+        <div class="innerdiv">Home</div>
+        <div class="innerdiv">About</div>
+        <div class="innerdiv">Contact</div>
+    </Div>
+</body>
+</html>
